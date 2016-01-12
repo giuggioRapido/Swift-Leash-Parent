@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC342F2D1C457B7300EB4600 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F2C1C457B7300EB4600 /* AppDelegate.swift */; };
+		DC342F2F1C457B7300EB4600 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F2E1C457B7300EB4600 /* ViewController.swift */; };
+		DC342F321C457B7300EB4600 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC342F301C457B7300EB4600 /* Main.storyboard */; };
+		DC342F341C457B7300EB4600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC342F331C457B7300EB4600 /* Assets.xcassets */; };
+		DC342F371C457B7300EB4600 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC342F351C457B7300EB4600 /* LaunchScreen.storyboard */; };
+		DC342F421C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F411C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift */; };
+		DC342F4D1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F4C1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC342F3E1C457B7300EB4600 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC342F211C457B7300EB4600 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC342F281C457B7300EB4600;
+			remoteInfo = "Swift Digital Leash-Parent";
+		};
+		DC342F491C457B7300EB4600 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC342F211C457B7300EB4600 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC342F281C457B7300EB4600;
+			remoteInfo = "Swift Digital Leash-Parent";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC342F291C457B7300EB4600 /* Swift Digital Leash-Parent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Digital Leash-Parent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC342F2C1C457B7300EB4600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC342F2E1C457B7300EB4600 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC342F311C457B7300EB4600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC342F331C457B7300EB4600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC342F361C457B7300EB4600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC342F381C457B7300EB4600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC342F3D1C457B7300EB4600 /* Swift Digital Leash-ParentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift Digital Leash-ParentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC342F411C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Digital_Leash_ParentTests.swift; sourceTree = "<group>"; };
+		DC342F431C457B7300EB4600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC342F481C457B7300EB4600 /* Swift Digital Leash-ParentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift Digital Leash-ParentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC342F4C1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Digital_Leash_ParentUITests.swift; sourceTree = "<group>"; };
+		DC342F4E1C457B7300EB4600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC342F261C457B7300EB4600 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC342F3A1C457B7300EB4600 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC342F451C457B7300EB4600 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC342F201C457B7300EB4600 = {
+			isa = PBXGroup;
+			children = (
+				DC342F2B1C457B7300EB4600 /* Swift Digital Leash-Parent */,
+				DC342F401C457B7300EB4600 /* Swift Digital Leash-ParentTests */,
+				DC342F4B1C457B7300EB4600 /* Swift Digital Leash-ParentUITests */,
+				DC342F2A1C457B7300EB4600 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC342F2A1C457B7300EB4600 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC342F291C457B7300EB4600 /* Swift Digital Leash-Parent.app */,
+				DC342F3D1C457B7300EB4600 /* Swift Digital Leash-ParentTests.xctest */,
+				DC342F481C457B7300EB4600 /* Swift Digital Leash-ParentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC342F2B1C457B7300EB4600 /* Swift Digital Leash-Parent */ = {
+			isa = PBXGroup;
+			children = (
+				DC342F2C1C457B7300EB4600 /* AppDelegate.swift */,
+				DC342F2E1C457B7300EB4600 /* ViewController.swift */,
+				DC342F301C457B7300EB4600 /* Main.storyboard */,
+				DC342F331C457B7300EB4600 /* Assets.xcassets */,
+				DC342F351C457B7300EB4600 /* LaunchScreen.storyboard */,
+				DC342F381C457B7300EB4600 /* Info.plist */,
+			);
+			path = "Swift Digital Leash-Parent";
+			sourceTree = "<group>";
+		};
+		DC342F401C457B7300EB4600 /* Swift Digital Leash-ParentTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC342F411C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift */,
+				DC342F431C457B7300EB4600 /* Info.plist */,
+			);
+			path = "Swift Digital Leash-ParentTests";
+			sourceTree = "<group>";
+		};
+		DC342F4B1C457B7300EB4600 /* Swift Digital Leash-ParentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC342F4C1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift */,
+				DC342F4E1C457B7300EB4600 /* Info.plist */,
+			);
+			path = "Swift Digital Leash-ParentUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC342F281C457B7300EB4600 /* Swift Digital Leash-Parent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC342F511C457B7300EB4600 /* Build configuration list for PBXNativeTarget "Swift Digital Leash-Parent" */;
+			buildPhases = (
+				DC342F251C457B7300EB4600 /* Sources */,
+				DC342F261C457B7300EB4600 /* Frameworks */,
+				DC342F271C457B7300EB4600 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swift Digital Leash-Parent";
+			productName = "Swift Digital Leash-Parent";
+			productReference = DC342F291C457B7300EB4600 /* Swift Digital Leash-Parent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC342F3C1C457B7300EB4600 /* Swift Digital Leash-ParentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC342F541C457B7300EB4600 /* Build configuration list for PBXNativeTarget "Swift Digital Leash-ParentTests" */;
+			buildPhases = (
+				DC342F391C457B7300EB4600 /* Sources */,
+				DC342F3A1C457B7300EB4600 /* Frameworks */,
+				DC342F3B1C457B7300EB4600 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC342F3F1C457B7300EB4600 /* PBXTargetDependency */,
+			);
+			name = "Swift Digital Leash-ParentTests";
+			productName = "Swift Digital Leash-ParentTests";
+			productReference = DC342F3D1C457B7300EB4600 /* Swift Digital Leash-ParentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC342F471C457B7300EB4600 /* Swift Digital Leash-ParentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC342F571C457B7300EB4600 /* Build configuration list for PBXNativeTarget "Swift Digital Leash-ParentUITests" */;
+			buildPhases = (
+				DC342F441C457B7300EB4600 /* Sources */,
+				DC342F451C457B7300EB4600 /* Frameworks */,
+				DC342F461C457B7300EB4600 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC342F4A1C457B7300EB4600 /* PBXTargetDependency */,
+			);
+			name = "Swift Digital Leash-ParentUITests";
+			productName = "Swift Digital Leash-ParentUITests";
+			productReference = DC342F481C457B7300EB4600 /* Swift Digital Leash-ParentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC342F211C457B7300EB4600 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Prince Fungus";
+				TargetAttributes = {
+					DC342F281C457B7300EB4600 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LK75LRUFXF;
+					};
+					DC342F3C1C457B7300EB4600 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LK75LRUFXF;
+						TestTargetID = DC342F281C457B7300EB4600;
+					};
+					DC342F471C457B7300EB4600 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LK75LRUFXF;
+						TestTargetID = DC342F281C457B7300EB4600;
+					};
+				};
+			};
+			buildConfigurationList = DC342F241C457B7300EB4600 /* Build configuration list for PBXProject "Swift Digital Leash-Parent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC342F201C457B7300EB4600;
+			productRefGroup = DC342F2A1C457B7300EB4600 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC342F281C457B7300EB4600 /* Swift Digital Leash-Parent */,
+				DC342F3C1C457B7300EB4600 /* Swift Digital Leash-ParentTests */,
+				DC342F471C457B7300EB4600 /* Swift Digital Leash-ParentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC342F271C457B7300EB4600 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC342F371C457B7300EB4600 /* LaunchScreen.storyboard in Resources */,
+				DC342F341C457B7300EB4600 /* Assets.xcassets in Resources */,
+				DC342F321C457B7300EB4600 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC342F3B1C457B7300EB4600 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC342F461C457B7300EB4600 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC342F251C457B7300EB4600 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC342F2F1C457B7300EB4600 /* ViewController.swift in Sources */,
+				DC342F2D1C457B7300EB4600 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC342F391C457B7300EB4600 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC342F421C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC342F441C457B7300EB4600 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC342F4D1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC342F3F1C457B7300EB4600 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC342F281C457B7300EB4600 /* Swift Digital Leash-Parent */;
+			targetProxy = DC342F3E1C457B7300EB4600 /* PBXContainerItemProxy */;
+		};
+		DC342F4A1C457B7300EB4600 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC342F281C457B7300EB4600 /* Swift Digital Leash-Parent */;
+			targetProxy = DC342F491C457B7300EB4600 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC342F301C457B7300EB4600 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC342F311C457B7300EB4600 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC342F351C457B7300EB4600 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC342F361C457B7300EB4600 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC342F4F1C457B7300EB4600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC342F501C457B7300EB4600 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC342F521C457B7300EB4600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Swift Digital Leash-Parent/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.princefungus.Swift-Digital-Leash-Parent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC342F531C457B7300EB4600 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Swift Digital Leash-Parent/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.princefungus.Swift-Digital-Leash-Parent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC342F551C457B7300EB4600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Swift Digital Leash-ParentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.princefungus.Swift-Digital-Leash-ParentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Digital Leash-Parent.app/Swift Digital Leash-Parent";
+			};
+			name = Debug;
+		};
+		DC342F561C457B7300EB4600 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Swift Digital Leash-ParentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.princefungus.Swift-Digital-Leash-ParentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Digital Leash-Parent.app/Swift Digital Leash-Parent";
+			};
+			name = Release;
+		};
+		DC342F581C457B7300EB4600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Swift Digital Leash-ParentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.princefungus.Swift-Digital-Leash-ParentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Swift Digital Leash-Parent";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DC342F591C457B7300EB4600 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Swift Digital Leash-ParentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.princefungus.Swift-Digital-Leash-ParentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Swift Digital Leash-Parent";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC342F241C457B7300EB4600 /* Build configuration list for PBXProject "Swift Digital Leash-Parent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC342F4F1C457B7300EB4600 /* Debug */,
+				DC342F501C457B7300EB4600 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC342F511C457B7300EB4600 /* Build configuration list for PBXNativeTarget "Swift Digital Leash-Parent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC342F521C457B7300EB4600 /* Debug */,
+				DC342F531C457B7300EB4600 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC342F541C457B7300EB4600 /* Build configuration list for PBXNativeTarget "Swift Digital Leash-ParentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC342F551C457B7300EB4600 /* Debug */,
+				DC342F561C457B7300EB4600 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC342F571C457B7300EB4600 /* Build configuration list for PBXNativeTarget "Swift Digital Leash-ParentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC342F581C457B7300EB4600 /* Debug */,
+				DC342F591C457B7300EB4600 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC342F211C457B7300EB4600 /* Project object */;
+}
