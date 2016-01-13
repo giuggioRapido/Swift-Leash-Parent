@@ -14,6 +14,7 @@
 		DC342F371C457B7300EB4600 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC342F351C457B7300EB4600 /* LaunchScreen.storyboard */; };
 		DC342F421C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F411C457B7300EB4600 /* Swift_Digital_Leash_ParentTests.swift */; };
 		DC342F4D1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F4C1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift */; };
+		DC342F5B1C45CB0100EB4600 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC342F5A1C45CB0100EB4600 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DC342F481C457B7300EB4600 /* Swift Digital Leash-ParentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift Digital Leash-ParentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC342F4C1C457B7300EB4600 /* Swift_Digital_Leash_ParentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_Digital_Leash_ParentUITests.swift; sourceTree = "<group>"; };
 		DC342F4E1C457B7300EB4600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC342F5A1C45CB0100EB4600 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				DC342F2C1C457B7300EB4600 /* AppDelegate.swift */,
 				DC342F2E1C457B7300EB4600 /* ViewController.swift */,
+				DC342F5A1C45CB0100EB4600 /* LocationManager.swift */,
 				DC342F301C457B7300EB4600 /* Main.storyboard */,
 				DC342F331C457B7300EB4600 /* Assets.xcassets */,
 				DC342F351C457B7300EB4600 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				DC342F2F1C457B7300EB4600 /* ViewController.swift in Sources */,
 				DC342F2D1C457B7300EB4600 /* AppDelegate.swift in Sources */,
+				DC342F5B1C45CB0100EB4600 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
