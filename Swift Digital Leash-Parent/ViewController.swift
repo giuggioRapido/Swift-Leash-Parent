@@ -9,25 +9,33 @@
 import UIKit
 import CoreLocation
 
+
+
 class ViewController: UIViewController {
+    
+    // MARK: - Properties -
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var radiusField: UITextField!
-    
-    var defaultFrame: CGRect = CGRectMake(0, 0, 0, 0)
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var submitButton: UIButton!
+    weak var activeField: UITextField?
+    var usernameFieldContainsText: Bool = false
+    var radiusFieldContainsText: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         usernameField.delegate = self
+        radiusField.delegate = self
+        
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textFieldDidChange:"), name: "UITextFieldTextDidChangeNotification", object: nil)
+        
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.defaultFrame = self.view.frame
-    }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self);
@@ -39,38 +47,73 @@ class ViewController: UIViewController {
     }
     
     
-    
+    // MARK: - Actions
     @IBAction func submit(sender: AnyObject) {
         
     }
     
-    
-    
-    
-    // MARK: Keyboard management
+    // MARK: - Keyboard management
     func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            
-            UIView.animateWithDuration(0.1, animations: { () -> Void in
-                self.view.frame = CGRectMake(0, 0 - keyboardSize.height, self.view.frame.size.width, self.view.frame.size.height)
-            })
+        
+        if let activeField = self.activeField, keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+            self.scrollView.contentInset = contentInsets
+            self.scrollView.scrollIndicatorInsets = contentInsets
+            var aRect = self.view.frame
+            aRect.size.height -= keyboardSize.size.height
+            if (!CGRectContainsPoint(aRect, activeField.frame.origin)) {
+                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
+            }
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.view.frame = self.defaultFrame
-        })
+        
+        let contentInsets = UIEdgeInsetsZero
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
     }
 }
 
-// MARK: UITextFieldDelegate extension
+
+// MARK: - UITextFieldDelegate and related methods -
 extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        activeField = nil
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        activeField = textField
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         usernameField.resignFirstResponder()
         return true
     }
     
+    func textFieldDidChange(notification: NSNotification) {
+        
+        let bothFieldsContainText: Bool = self.radiusField.text != "" && self.usernameField.text != ""
+        
+        func updateSubmitButtonState() {
+            let curentState: Bool = self.submitButton.enabled
+            if curentState != bothFieldsContainText {
+                UIView.transitionWithView(
+                    self.submitButton,
+                    duration: 0.3,
+                    options: UIViewAnimationOptions.TransitionCrossDissolve,
+                    animations: { () -> Void in
+                        self.submitButton.enabled = bothFieldsContainText },
+                    completion: nil)
+            }
+        }
+        
+        updateSubmitButtonState()
+    }
+    
+    
 }
+
 
 
