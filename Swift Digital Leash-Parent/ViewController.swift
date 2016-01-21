@@ -29,13 +29,9 @@ class ViewController: UIViewController {
         usernameField.delegate = self
         radiusField.delegate = self
         
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textFieldDidChange:"), name: "UITextFieldTextDidChangeNotification", object: nil)
-        
     }
-    
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self);
@@ -45,7 +41,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // MARK: - Actions
     @IBAction func submit(sender: AnyObject) {
@@ -68,7 +63,6 @@ class ViewController: UIViewController {
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        
         let contentInsets = UIEdgeInsetsZero
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
@@ -92,8 +86,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidChange(notification: NSNotification) {
-        
+    @IBAction func textFieldChanged(sender: AnyObject) {
         let bothFieldsContainText: Bool = self.radiusField.text != "" && self.usernameField.text != ""
         
         func updateSubmitButtonState() {
@@ -108,12 +101,8 @@ extension ViewController: UITextFieldDelegate {
                     completion: nil)
             }
         }
-        
         updateSubmitButtonState()
     }
-    
-    
 }
-
 
 

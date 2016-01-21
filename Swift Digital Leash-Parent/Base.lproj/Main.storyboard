@@ -57,6 +57,9 @@
                                                 <rect key="frame" x="150" y="257" width="300" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="WLI-6g-jlL"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-AS-BxW">
                                                 <rect key="frame" x="255" y="320" width="91" height="23"/>
@@ -68,6 +71,9 @@
                                                 <rect key="frame" x="210" y="351" width="180" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="FHz-1r-Krn"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlH-Yo-5ej">
                                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
