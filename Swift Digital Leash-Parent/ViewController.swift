@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     weak var activeField: UITextField?
     var usernameFieldContainsText: Bool = false
     var radiusFieldContainsText: Bool = false
+    let locationServices = LocationServices()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func submit(sender: AnyObject) {
-        
+        locationServices.locationManager.requestLocation()
     }
     
     // MARK: - Keyboard management
@@ -87,12 +88,15 @@ extension ViewController: UITextFieldDelegate {
     }
     
     @IBAction func textFieldChanged(sender: AnyObject) {
-        let bothFieldsContainText: Bool = self.radiusField.text != "" && self.usernameField.text != ""
+        let radiusFieldContainsText = self.radiusField.text != ""
+        let usernameFieldContainsText = self.usernameField.text != ""
+        let bothFieldsContainText = radiusFieldContainsText && usernameFieldContainsText
         
         func updateSubmitButtonState() {
             let curentState: Bool = self.submitButton.enabled
+            
             if curentState != bothFieldsContainText {
-                UIView.transitionWithView(
+                UIView.transitionWithView (
                     self.submitButton,
                     duration: 0.3,
                     options: UIViewAnimationOptions.TransitionCrossDissolve,
@@ -100,9 +104,9 @@ extension ViewController: UITextFieldDelegate {
                         self.submitButton.enabled = bothFieldsContainText },
                     completion: nil)
             }
+            
         }
         updateSubmitButtonState()
     }
 }
-
 
