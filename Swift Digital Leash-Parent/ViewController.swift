@@ -24,14 +24,17 @@ class ViewController: UIViewController {
     var radiusFieldContainsText: Bool = false
     let locationServices = LocationServices()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         usernameField.delegate = self
         radiusField.delegate = self
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
+        locationServices.checkAuthorizationStatus(handleDeniedAuthorizationStatus)
     }
     
     deinit {
@@ -45,7 +48,12 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func submit(sender: AnyObject) {
-        locationServices.locationManager.requestLocation()
+        switch CLLocationManager.authorizationStatus() {
+        case .AuthorizedWhenInUse:
+            locationServices.locationManager.requestLocation()
+        default:
+            locationServices.checkAuthorizationStatus(handleDeniedAuthorizationStatus)
+        }
     }
     
     // MARK: - Keyboard management
@@ -68,6 +76,61 @@ class ViewController: UIViewController {
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
     }
+    
+    func sendUserData() {
+        
+        let URL = NSURL(string: "http://protected-wildwood-8664.herokuapp.com/users")
+        let request = NSMutableURLRequest(URL: URL!)
+        //        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        //        let session = NSURLSession.sharedSession()
+        
+        let userDetails: [String: String] = ["username":usernameField.text!,"latitude":"\(locationServices.currentLocation!.coordinate.latitude)", "longitude":"\(locationServices.currentLocation!.coordinate.longitude)", "radius":radiusField.text!]
+        print(userDetails)
+        
+        let dictToSend = ["utf8": "✓", "authenticity_token":"EvZva3cKnzo3Y0G5R3NktucCr99o/2UWOPVAmJYdBOc=", "user":userDetails, "commit":"Create User", "action":"update", "controller":"users"]
+        
+        if NSJSONSerialization.isValidJSONObject(dictToSend) {
+            do {
+                let JSONData = try NSJSONSerialization.dataWithJSONObject(dictToSend, options: NSJSONWritingOptions.PrettyPrinted)
+                
+                request.HTTPMethod = "POST"
+                request.setValue("application/json; charset=utf-8", forHTTPHeaderField:"Content-Type")
+                request.HTTPBody = JSONData
+                
+                let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+                    if error != nil{
+                        print("Error -> \(error)")
+                        return
+                    } else {
+                        print("success?")
+                    }
+                }
+                
+                task.resume()
+                
+                
+            } catch {
+                print("There was a problem serializing:\(error)")
+            }
+            
+        } else {
+            print("Invalid JSON object")
+            
+        }
+        
+    }
+    
+    func handleDeniedAuthorizationStatus() {
+        let alert = UIAlertController.init(
+            title: "Swift Leash is not authorized to use your location.",
+            message: "Please change the app's permissions in your Settings.",
+            preferredStyle: .Alert)
+        
+        alert.addAction(UIAlertAction.init(title: "OK", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 
 
@@ -88,25 +151,23 @@ extension ViewController: UITextFieldDelegate {
     }
     
     @IBAction func textFieldChanged(sender: AnyObject) {
+        /// Set up Bools to keep track of whether the text fields are empty or not and the current state of button
         let radiusFieldContainsText = self.radiusField.text != ""
         let usernameFieldContainsText = self.usernameField.text != ""
         let bothFieldsContainText = radiusFieldContainsText && usernameFieldContainsText
+        let curentSubmitButtonState: Bool = self.submitButton.enabled
         
-        func updateSubmitButtonState() {
-            let curentState: Bool = self.submitButton.enabled
-            
-            if curentState != bothFieldsContainText {
-                UIView.transitionWithView (
-                    self.submitButton,
-                    duration: 0.3,
-                    options: UIViewAnimationOptions.TransitionCrossDissolve,
-                    animations: { () -> Void in
-                        self.submitButton.enabled = bothFieldsContainText },
-                    completion: nil)
-            }
-            
+        /// submitButton.enabled should always equal to bothFieldsContainText.
+        /// We animate the submit state change only when necessary
+        if curentSubmitButtonState != bothFieldsContainText {
+            UIView.transitionWithView (
+                self.submitButton,
+                duration: 0.3,
+                options: UIViewAnimationOptions.TransitionCrossDissolve,
+                animations: { () -> Void in
+                    self.submitButton.enabled = bothFieldsContainText },
+                completion: nil)
         }
-        updateSubmitButtonState()
     }
 }
 

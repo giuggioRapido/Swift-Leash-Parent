@@ -9,19 +9,20 @@
 import Foundation
 import CoreLocation
 
-class LocationServices: NSObject {
+class LocationServices: NSObject, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     
     override init() {
         super.init()
         
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
+        //        if CLLocationManager.authorizationStatus() == .NotDetermined {
+        //            locationManager.requestWhenInUseAuthorization()
+        //        }
         
-        self.locationManager.distanceFilter = 500
-        self.locationManager.delegate = self
+        
+        //        self.locationManager.distanceFilter = 500
+        //        self.locationManager.delegate = self
         
         //self.locationManager.requestLocation()
         
@@ -47,22 +48,35 @@ class LocationServices: NSObject {
     //
     //    }
     
-}
-
-
-// MARK: - CLLocationManagerDelegate extension
-extension LocationServices: CLLocationManagerDelegate {
+    func checkAuthorizationStatus(errorHandler: () -> Void) {
+        switch CLLocationManager.authorizationStatus() {
+        case .NotDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .AuthorizedWhenInUse:
+            locationManager.delegate = self
+            locationManager.distanceFilter = 500
+        case .Denied, .Restricted:
+            errorHandler()
+        default:
+            print(CLLocationManager.authorizationStatus())
+        }
+        
+    }
+    
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         print("did change auth status")
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("location changed: \(locations)")
-        
         currentLocation = locations[0]
+        //        delegate.sendUserDetails
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("did fail with error")
+        print("did fail with error: \(error.localizedDescription)")
     }
+    
 }
+
+// TODO: trigger sendUserDetails
