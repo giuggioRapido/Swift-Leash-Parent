@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift Digital Leash-Parent/LocationServices.swift"
-            timestampString = "476654723.135322"
+            timestampString = "476661915.773418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "LocationServices"
-            landmarkType = "3">
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "TODO: trigger sendUserDetails"
+            landmarkType = "1">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift Digital Leash-Parent/LocationServices.swift"
-            timestampString = "476654723.135322"
+            timestampString = "476661915.773418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "LocationServices"
-            landmarkType = "3">
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "TODO: trigger sendUserDetails"
+            landmarkType = "1">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
